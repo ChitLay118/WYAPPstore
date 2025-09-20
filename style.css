@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  background: #f7f8fb;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+header .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 12px;
+}
+
+main {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.app-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background-color: #0b74de;
+  color: #fff;
+}
+
+.download-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.install-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+progress {
+  width: 100%;
+  margin-top: 8px;
+}
