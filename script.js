@@ -1,6 +1,6 @@
 const apps = [
-  { name: 'App One', icon: 'Auto Clicker Pro v2.6.0 Modded by @Getmodpcs.png', file: 'Auto Clicker Pro v2.6.0 Modded by @Getmodpcs.apk' },
-  { name: 'App Two', icon: 'DevInfo Pro v3.4.0.1 Modded by @Getmodpcs.png', file: 'DevInfo Pro v3.4.0.1 Modded by @Getmodpcs.apk' },
+  { name: 'Auto Clicker', icon: 'Auto Clicker Pro v2.6.0 Modded by @Getmodpcs.png', file: 'Auto Clicker Pro v2.6.0 Modded by @Getmodpcs.apk' },
+  { name: 'DevInfo', icon: 'DevInfo Pro v3.4.0.1 Modded by @Getmodpcs.png', file: 'DevInfo Pro v3.4.0.1 Modded by @Getmodpcs.apk' },
   { name: 'App Three', icon: 'images/app3.png', file: 'apk/app3.apk' },
 ];
 
