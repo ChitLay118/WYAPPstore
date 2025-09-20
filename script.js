@@ -1,31 +1,38 @@
-document.querySelectorAll('.download-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const link = button.dataset.link;
-    const card = button.closest('.app-card');
-    const progress = card.querySelector('.download-progress');
-    const installBtn = card.querySelector('.install-btn');
+const downloadBtn = document.getElementById('downloadBtn');
+const progressBar = document.getElementById('progress');
 
-    button.disabled = true;
-    let value = 0;
+downloadBtn.addEventListener('click', () => {
+  fetch('/myapp.apk')
+    .then(response => {
+      const contentLength = response.headers.get('Content-Length');
+      if (!contentLength) throw new Error('Content-Length missing');
+      const total = parseInt(contentLength, 10);
+      let loaded = 0;
+      const reader = response.body.getReader();
 
-    // Simulate download progress
-    const interval = setInterval(() => {
-      value += Math.random() * 10;
-      if (value >= 100) value = 100;
-      progress.value = value;
-
-      if (value >= 100) {
-        clearInterval(interval);
-        installBtn.disabled = false;
-        installBtn.addEventListener('click', () => {
-          alert("Install started for " + card.querySelector('h2').textContent);
-          // Android device မှာ install လုပ်မယ်ဆိုရင်
-          // window.location.href = link; နဲ့ open လုပ်နိုင်
-        });
-      }
-    }, 500);
-
-    // Real download link open for browser
-    window.open(link, '_blank');
-  });
+      const stream = new ReadableStream({
+        start(controller) {
+          function push() {
+            reader.read().then(({ done, value }) => {
+              if (done) {
+                controller.close();
+                // Download finished → trigger install
+                const a = document.createElement('a');
+                a.href = '/myapp.apk';
+                a.download = 'myapp.apk';
+                a.click();
+                return;
+              }
+              loaded += value.length;
+              progressBar.value = (loaded / total) * 100;
+              controller.enqueue(value);
+              push();
+            });
+          }
+          push();
+        }
+      });
+      return new Response(stream);
+    })
+    .catch(console.error);
 });
