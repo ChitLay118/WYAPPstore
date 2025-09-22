@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WaiYan App Store</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WY App Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1>WaiYan App Store</h1>
-<div id="appContainer"></div>
-<script src="script.js"></script>
+<body class="bg-white min-h-screen font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <div>
+                <h1 class="text-base font-bold">WY App Store</h1>
+                <h2 class="text-xs font-normal">c388925@gmail.com</h2>
+            </div>
+            <div>
+                <input type="text" id="search-input" placeholder="အက်ပ်များကိုရှာရန်"
+                       class="px-4 py-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-48">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+        <div id="category-nav" class="container mx-auto flex overflow-x-auto whitespace-nowrap py-3 px-4 sm:px-6 lg:px-8">
+            <!-- Category buttons injected by JS -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Featured Apps Section -->
+        <h2 class="text-2xl font-bold mb-4">အထူးအသားပေးအက်ပ်များ</h2>
+        <div id="featured-app-list-container" class="flex overflow-hidden relative w-full scroll-smooth">
+            <!-- Featured app cards injected by JS -->
+        </div>
+
+        <!-- All Apps Section -->
+        <h2 class="text-2xl font-bold mt-8 mb-4">အက်ပ်အားလုံး</h2>
+        <div id="all-app-list-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- All app cards injected by JS -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-600 py-4 mt-8">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2025 WY App Store. အခွင့်အရေးအားလုံးကို သီးသန့်ပိုင်ဆိုင်ပါသည်။
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
