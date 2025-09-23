@@ -86,7 +86,7 @@ body {
     margin-bottom: 2px;
 }
 
-/* New Styles for Image Slider */
+/* Featured Screen Styles */
 .image-slider-container {
     position: relative;
     width: 100%;
@@ -96,18 +96,20 @@ body {
 .image-slider {
     display: flex;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    gap: 16px; /* Space between images */
+    padding-bottom: 10px; /* To prevent scrollbar from hiding content */
 }
 
 .slider-image-wrapper {
     flex-shrink: 0;
-    width: 100%;
-    height: 150px; /* Equivalent to 150dp */
+    width: 250px; /* Fixed width for each image */
+    height: 150px;
     position: relative;
-    scroll-snap-align: center;
-    margin-right: 16px;
+    scroll-snap-align: start;
+    cursor: pointer;
 }
 
 .slider-image-wrapper img {
@@ -133,4 +135,25 @@ body {
 .download-icon .material-icons {
     font-size: 20px;
     color: white;
+}
+
+/* New Styles for Fullscreen Modal */
+#fullscreen-image-container {
+    position: relative;
+}
+
+#fullscreen-image-container .fullscreen-image-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+#fullscreen-image-container .fullscreen-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
