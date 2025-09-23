@@ -80,6 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:55,name:'CarX Highway Racing',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',downloadUrl:'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881'},
         {id:56,name:'Invasion: Aerial Warfare',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',downloadUrl:'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877'},
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
+        {id:58,name:'Perplexity',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Perplexity-MOD-APK1.webp',downloadUrl:'https://getmodsapk.com/dl-track/perplexity-mod-apk/216287'},
+        {id:59,name:'ChatOn',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/ChatOn%20MOD%20APK%20(1)4.webp',downloadUrl:'https://getmodsapk.com/dl-track/chaton-mod-apk/207576'},
+        {id:60,name:'AI Future Baby',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Cosplay%20MOD%20APK2.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-hidden-face-cosplay-app-mod-apk/214571'},
+        {id:61,name:'AI Video Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/AI-Video-Generator-MOD-APK6.webp',downloadUrl:'https://getmodsapk.com/dl-track/6584-ai-video-generator-mod-apk/206318'},
+        {id:62,name:'AI Image Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/8/ai-image-generator-mod-apk.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-image-generator-mod-apk/166352'},
     ];
     
     // Example data for the Featured App Screen (Modified)
