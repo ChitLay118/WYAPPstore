@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f0f2f5;
+    overflow-x: hidden;
 }
 
 .app-card-bg-image {
@@ -10,7 +11,6 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 1rem;
 }
 
 .app-card-bg-image::before {
@@ -23,7 +23,7 @@ body {
 }
 
 .app-card-bg-image:hover::before {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .app-card-content {
@@ -38,12 +38,26 @@ body {
 
 .app-card {
     animation: fadeIn 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .featured-card {
-    transition: transform 0.5s ease-in-out;
     min-width: 100%;
     flex-shrink: 0;
+    margin-right: 16px;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+    scroll-snap-align: start;
+}
+
+.featured-card:last-child {
+    margin-right: 0;
 }
 
 @media (min-width: 1024px) {
@@ -52,11 +66,22 @@ body {
     }
 }
 
-a.download-btn {
-    transition: all 0.3s ease;
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #4b5563; /* text-gray-600 */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-a.download-btn:hover {
-    background-color: #16a34a;
+.bottom-nav-item.active {
+    color: #2563eb; /* text-blue-600 */
     transform: translateY(-2px);
+}
+
+.bottom-nav-item .material-icons {
+    font-size: 24px;
+    margin-bottom: 2px;
 }
