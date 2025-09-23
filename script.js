@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mainContentArea = document.getElementById('main-content-area');
     const featuredContainer = document.getElementById('featured-app-list-container');
     const allContainer = document.getElementById('all-app-list-container');
     const categoryNav = document.getElementById('category-nav');
     const searchInput = document.getElementById('search-input');
+    const mainContent = document.querySelector('main');
 
     let currentFilter = 'All Apps';
     let currentSearchTerm = '';
     
     // Swipe gesture variables
-    let touchstartX = 0;
-    let touchendX = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     const dummyApps = [
         {id:1,name:'Netflix Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/netflix-150x150.jpg',bgImageUrl:'https://i.ibb.co/jkqNvDqR/pexels-dreamypixel-547114.jpg',downloadUrl:'https://files.modyolo.com/Netflix./Netflix%20v9.34.0%20MOD.apk'},
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
         {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%80%258A%25E1%80%25BA%25E1%80%25B8.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%80%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Games', icon: 'sports_esports', category: 'Games' },
         { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
     ];
-
+    
     function renderNav() {
         categoryNav.innerHTML = navItems.map(item => `
             <button class="bottom-nav-item flex-1 p-2 focus:outline-none ${currentFilter === item.category ? 'active' : ''}" data-category="${item.category}">
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', e => {
                 const newFilter = e.currentTarget.dataset.category;
                 if (newFilter === 'Featured') {
-                    // Stay on the featured section, no filter change needed
+                    featuredContainer.scrollIntoView({ behavior: 'smooth' });
                     return;
                 }
                 currentFilter = newFilter;
@@ -106,100 +106,127 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function renderAppCards() {
-        // Clear main content first
-        mainContentArea.innerHTML = '';
-        
-        // Render Featured Apps section
-        const featuredApps = dummyApps.filter(a => a.isFeatured);
-        if (featuredApps.length > 0) {
-            mainContentArea.innerHTML += `
-                <h2 class="text-2xl font-bold mb-4">အထူးအသားပေးအက်ပ်များ</h2>
-                <div id="featured-app-list-container" class="flex overflow-x-hidden relative w-full snap-x snap-mandatory scroll-smooth">
-                    ${featuredApps.map(app => `
-                        <a href="${app.downloadUrl}" class="app-card p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col space-y-3 text-white app-card-bg-image featured-card" style="background-image:url(${app.bgImageUrl})">
-                            <div class="app-card-content flex items-center space-x-3">
-                                <div class="w-16 h-16 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                                    <img src="${app.iconUrl}" alt="${app.name}" class="w-full h-full object-cover" />
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-bold">${app.name}</h3>
-                                    <p class="text-xs text-gray-200">${app.category}</p>
-                                </div>
-                            </div>
-                        </a>
-                    `).join('')}
-                </div>
-            `;
+    function renderAppCards(container, appsToRender, isFeatured = false) {
+        if (appsToRender.length === 0) {
+            container.innerHTML = `<p class="text-center text-gray-500 col-span-full py-10">အက်ပ်မတွေ့ပါ</p>`;
+            return;
         }
+        
+        const html = appsToRender.map(app => {
+            if (isFeatured) {
+                return `
+                <a href="${app.downloadUrl}" class="app-card p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col space-y-3 text-white app-card-bg-image featured-card" style="background-image:url(${app.bgImageUrl})">
+                    <div class="app-card-content flex items-center space-x-3">
+                        <div class="w-16 h-16 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+                            <img src="${app.iconUrl}" alt="${app.name}" class="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">${app.name}</h3>
+                            <p class="text-xs text-gray-200">${app.category}</p>
+                        </div>
+                    </div>
+                </a>
+                `;
+            } else {
+                return `
+                <div class="app-card p-4 rounded-2xl shadow-xl flex flex-col items-center space-y-3 bg-white text-center transition-transform transform hover:scale-105">
+                    <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+                        <img src="${app.iconUrl}" alt="${app.name}" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="text-base font-bold truncate w-full px-2">${app.name}</h3>
+                    <p class="text-sm text-gray-500">${app.category}</p>
+                    <a href="${app.downloadUrl}" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full text-center hover:bg-blue-700 transition-colors duration-200 w-full">
+                        Download
+                    </a>
+                </div>
+                `;
+            }
+        }).join('');
+        
+        container.innerHTML = html;
+    }
 
-        // Render All Apps section based on filter
+    function updateUI() {
+        const featuredApps = dummyApps.filter(a => a.isFeatured);
         const filteredApps = dummyApps
             .filter(a => (currentFilter === 'All Apps' || a.category === currentFilter) && a.name.toLowerCase().includes(currentSearchTerm.toLowerCase()))
             .filter(a => !a.isFeatured);
-            
-        mainContentArea.innerHTML += `
-            <h2 class="text-2xl font-bold mt-8 mb-4">${currentFilter === 'All Apps' ? 'အက်ပ်အားလုံး' : currentFilter}</h2>
-            <div id="all-app-list-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                ${filteredApps.length > 0 ? filteredApps.map(app => `
-                    <div class="app-card p-4 rounded-2xl shadow-xl flex flex-col items-center space-y-3 bg-white text-center transition-transform transform hover:scale-105">
-                        <div class="w-24 h-24 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                            <img src="${app.iconUrl}" alt="${app.name}" class="w-full h-full object-cover" />
-                        </div>
-                        <h3 class="text-base font-bold truncate w-full px-2">${app.name}</h3>
-                        <p class="text-sm text-gray-500">${app.category}</p>
-                        <a href="${app.downloadUrl}" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full text-center hover:bg-blue-700 transition-colors duration-200 w-full">
-                            Download
-                        </a>
-                    </div>
-                `).join('') : '<p class="text-center text-gray-500 col-span-full py-10">အက်ပ်မတွေ့ပါ</p>'}
-            </div>
-        `;
-    }
-
-    function changeTab(direction) {
-        const currentCategoryIndex = navItems.findIndex(item => item.category === currentFilter);
-        let newIndex = currentCategoryIndex;
-
-        if (direction === 'right') { // Swiping left to go to the next tab
-            newIndex = (currentCategoryIndex + 1) % navItems.length;
-        } else if (direction === 'left') { // Swiping right to go to the previous tab
-            newIndex = (currentCategoryIndex - 1 + navItems.length) % navItems.length;
-        }
         
-        // Skip 'Featured' tab when swiping
-        if (navItems[newIndex].category === 'Featured') {
-             newIndex = direction === 'right' ? newIndex + 1 : newIndex - 1;
-             newIndex = (newIndex + navItems.length) % navItems.length;
-        }
-
-        currentFilter = navItems[newIndex].category;
-        renderNav();
-        renderAppCards();
+        renderAppCards(featuredContainer, featuredApps, true);
+        renderAppCards(allContainer, filteredApps, false);
     }
-
-    mainContentArea.addEventListener('touchstart', e => {
-        touchstartX = e.changedTouches[0].screenX;
-    });
-
-    mainContentArea.addEventListener('touchend', e => {
-        touchendX = e.changedTouches[0].screenX;
-        const swipeThreshold = 50;
-        if (touchendX < touchstartX - swipeThreshold) {
-            changeTab('right'); // Swipe left to go to next tab
-        } else if (touchendX > touchstartX + swipeThreshold) {
-            changeTab('left'); // Swipe right to go to previous tab
-        }
-    });
 
     searchInput.addEventListener('input', e => {
         currentSearchTerm = e.target.value;
         currentFilter = 'All Apps';
         renderNav();
-        renderAppCards();
+        updateUI();
     });
 
-    // Initial render
     renderNav();
-    renderAppCards();
+    updateUI();
+
+    // Featured Carousel Autoplay
+    function startFeaturedCarousel() {
+        const cards = featuredContainer.children;
+        if (cards.length > 0) {
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= cards.length) {
+                    currentIndex = 0;
+                }
+                const scrollPosition = cards[currentIndex].offsetLeft;
+                featuredContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }, 3000);
+        }
+    }
+    
+    startFeaturedCarousel();
+
+    // Add swipe functionality for mobile view only
+    const isMobile = () => window.innerWidth < 640;
+    
+    function changeTab(direction) {
+        const currentIndex = navItems.findIndex(item => item.category === currentFilter);
+        const newIndex = currentIndex + direction;
+
+        if (newIndex >= 0 && newIndex < navItems.length) {
+            const newFilter = navItems[newIndex].category;
+            if (newFilter === 'Featured') {
+                featuredContainer.scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+            currentFilter = newFilter;
+            currentSearchTerm = '';
+            searchInput.value = '';
+            renderNav();
+            updateUI();
+        }
+    }
+
+    mainContent.addEventListener('touchstart', e => {
+        if (isMobile()) {
+            touchStartX = e.changedTouches[0].screenX;
+        }
+    });
+
+    mainContent.addEventListener('touchend', e => {
+        if (isMobile()) {
+            touchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = touchEndX - touchStartX;
+
+            // Swipe right to left (next tab)
+            if (swipeDistance < -50) {
+                changeTab(1);
+            }
+            // Swipe left to right (previous tab)
+            else if (swipeDistance > 50) {
+                changeTab(-1);
+            }
+        }
+    });
 });
