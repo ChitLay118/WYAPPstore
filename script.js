@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:3,name:'WY AppStore',category:'Modified Apps',isFeatured:true,iconUrl:'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg',bgImageUrl:'https://i.ibb.co/XHJwdsm/pexels-umkreisel-app-956999.jpg',downloadUrl:'https://www.mediafire.com/file/n8ohx9xnfisynuw/WY_App_Store.apk/file'},
         {id:4,name:'Sketchware Pro',category:'Development',isFeatured:true,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',bgImageUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:5,name:'AIDE Pro 2.8',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/8CPMDm7/photo-2025-09-18-07-50-07.jpg',downloadUrl:'https://www.mediafire.com/file/rh85g28nbmnur3f/AIDE_Pro_2.8.7-freely.apk/file'},
-        {id:6,name:'Download Video No Watermark',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/tTrfrTT2/photo-2025-09-18-10-04-51.jpg',downloadUrl:'https://www.mediafire.com/file/jcj5q0w5s4t6p3r/AhaTik_Downloader_Premium_v1.52.3_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:6,name:'Download Video No Watermark',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/tTrfrTT2/photo-2025-09-18-10-04-51.jpg',downloadUrl:'https://www.mediafire.com/file/jcj5q0w5s4t6p3r/AhaTik_Downloader_Premium_v1.52.3_Modded_by_%2540Getmodpcs.apk/file'},
         {id:7,name:'IMDB Movies and TV Shows',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/206dWSK6/photo-2025-09-18-11-23-21.jpg',downloadUrl:'https://www.mediafire.com/file/iehjn9emmv2pa2l/IMDb_Premium_v9.3.2.160259480_Modded_by_%2540Getmodpcs.apk/file'},
         {id:8,name:'သတင်းနှင့်ဇာတ်ကား',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/NRB7DRs/IMG-20250907-105744.png',downloadUrl:'https://www.mediafire.com/file/kz2cas0hpx4p2mz/%E1%80%9E%E1%80%90%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%BE%E1%80%84%E1%80%BA%E1%80%B7%E1%80%87%E1%80%AC%E1%80%90%E1%80%BA%E1%80%80%E1%80%AC%E1%80%B8update.apk/file'},
         {id:9,name:'Netflix Premium',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/netflix-150x150.jpg',downloadUrl:'https://files.modyolo.com/Netflix./Netflix%20v9.34.0%20MOD.apk'},      
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:11,name:'WY AppStore',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg',downloadUrl:'https://www.mediafire.com/file/n8ohx9xnfisynuw/WY_App_Store.apk/file'},
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
-        {id:14,name:'AllKaBar',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%80%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%2580%25B8.apk/file'},
+        {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%80%2594%25E1%80%258A%25E1%80%25BA%25E1%80%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -44,27 +44,27 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:34,name:'CapCut pro',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/CapCut%20%20MOD%20APK7.webp',downloadUrl:'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326'},
         {id:35,name:'Spring',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/qMZXnKhQ/photo-2025-09-18-15-12-57.jpg',downloadUrl:'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file'},
         {id:36,name:'KingMaster',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/xPVJQ98/photo-2025-09-18-15-12-52.jpg',downloadUrl:'https://www.mediafire.com/file/9cghockewg7efoq/KineMaster_Premium_v7.8.5.3542.GP_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:37,name:'AllVideoDownloader',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/C5HfBgMq/photo-2025-09-18-15-12-48.jpg',downloadUrl:'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:37,name:'AllVideoDownloader',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/C5HfBgMq/photo-2025-09-18-15-12-48.jpg',downloadUrl:'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file'},
         {id:38,name:'Cartoon PhotoEditor',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/bMTdQ393/photo-2025-09-18-15-12-26.jpg',downloadUrl:'https://www.mediafire.com/file/6mjxwm5ie5wka3o/ToonTap_Pro_v1.50.89_Modded_by_%2540Getmodpcs.apk/file'},
         {id:39,name:'BesoccerPremium',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/xtDd5G97/photo-2025-09-18-15-12-31.jpg',downloadUrl:'https://www.mediafire.com/file/5w8cx2u7xybw0uf/BeSoccer_Premium_v5.8.0_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:40,name:'TurboVPN Premium',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/ycfbQwfn/photo-2025-09-18-15-12-39.jpg',downloadUrl:'https://www.mediafire.com/file/gtltcs1mzki5c91/Turbo_VPN_Premium_v4.3.1.8_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:40,name:'TurboVPN Premium',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/ycfbQwfn/photo-2025-09-18-15-12-39.jpg',downloadUrl:'https://www.mediafire.com/file/gtltcs1mzki5c91/Turbo_VPN_Premium_v4.3.1.8_Modded_by_%2540Getmodpcs.apk/file'},
         {id:41,name:'PicsartPremium',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/mrVk51Y5/photo-2025-09-18-15-12-22.jpg',downloadUrl:'https://www.mediafire.com/file/ri34hjh84h7456p/Picsart_Premium_Gold_v29.3.2_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:42,name:'Ai Chat Assistant',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/hFvZrwB2/photo-2025-09-18-15-12-17.jpg',downloadUrl:'https://www.mediafire.com/file/51vqzemcoexyl6y/Chat_Smith_Premium_v8.251105.8_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:42,name:'Ai Chat Assistant',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/hFvZrwB2/photo-2025-09-18-15-12-17.jpg',downloadUrl:'https://www.mediafire.com/file/51vqzemcoexyl6y/Chat_Smith_Premium_v8.251105.8_Modded_by_%2540Getmodpcs.apk/file'},
         {id:43,name:'Canva',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/PZ1GSxbs/download.jpg',downloadUrl:'https://www.mediafire.com/file/ngbm1qfsyge6fuh/Canva_v2.206.0_MOD.apk/file'},
         {id:44,name:'IPTV Pro',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/ccrFcJC4/photo-2025-09-19-01-12-11.jpg',downloadUrl:'https://www.mediafire.com/file/anytgh5kaianout/IPTV_Pro_v9.3.5_Modded_by_%2540Getmodpcs.apk/file'},
         {id:45,name:'My Movie Premium',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/99mb8yc5/photo-2025-09-19-01-12-06.jpg',downloadUrl:'https://www.mediafire.com/file/l2p55wzq028j6nk/MyMovie_Premium_v14.13.5_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:46,name:'Telegram Premium',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/fd0r9r0j/photo-2025-09-19-01-11-43.jpg',downloadUrl:'https://www.mediafire.com/file/7ipy7brs863eywr/Telegram_Premium_v12.2.0_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:46,name:'Telegram Premium',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/fd0r9r0j/photo-2025-09-19-01-11-43.jpg',downloadUrl:'https://www.mediafire.com/file/7ipy7brs863eywr/Telegram_Premium_v12.2.0_Modded_by_%2540Getmodpcs.apk/file'},
         {id:47,name:'VideoShowVIP',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/VXmztTY/photo-2025-09-19-01-11-55.jpg',downloadUrl:'https://www.mediafire.com/file/psh22x5opjxwo1h/VideoShow_VIP_v11.7.1.0_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:48,name:'AutoClicker',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/vCxVzcqL/photo-2025-09-19-01-12-01.jpg',downloadUrl:'https://www.mediafire.com/file/nru2908tnni49s9/Auto_Clicker_Pro_v2.6.0_Modded_by_%2540Getmodpcs.apk/file'},
-        {id:49,name:'Chatgpt Premium',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/Sw6ctmTM/download.png',downloadUrl:'https://www.mediafire.com/file/uuzy14nlgqnc4pf/Ai-Chatbot-v5.2.0.2-MOD-OTR-%2528Getmodsapk.com%2529.apk/file'},
-        {id:50,name:'TeraBox Cloud Storage',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/mrNs6MTk/photo-2025-09-19-01-42-56.jpg',downloadUrl:'https://files.modyolo.com/Terabox/TeraBox_%20v4.5.3%20_MOD.apk'},
+        {id:48,name:'AutoClicker',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/vCxVzcqL/photo-2025-09-19-01-12-01.jpg',downloadUrl:'https://www.mediafire.com/file/nru2908tnni49s9/Auto_Clicker_Pro_v2.6.0_Modded_by_%2540Getmodpcs.apk/file'},
+        {id:49,name:'Chatgpt Premium',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/Sw6ctmTM/download.png',downloadUrl:'https://www.mediafire.com/file/uuzy14nlgqnc4pf/Ai-Chatbot-v5.2.0.2-MOD-OTR-%2528Getmodsapk.com%2529.apk/file'},
+        {id:50,name:'TeraBox Cloud Storage',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/mrNs6MTk/photo-2025-09-19-01-42-56.jpg',downloadUrl:'https://files.modyolo.com/Terabox/TeraBox_%20v4.5.3%20_MOD.apk'},
         {id:51,name:'Alight Motion',category:'Modified Apps',isFeatured:false,iconUrl:'https://play-lh.googleusercontent.com/OU0BlP8C9-V7ECl2crma7B48nzDbK7liSLjn0j_fpTlyWG6qyEE-mw_KFZ9aOXF0a3w=w100-h100-rw',downloadUrl:'https://file.apkdone.io/s/a8cFKqR8eGLmgew/download'},
-        {id:52,name:'Tennis Clash v6.18.2 MOD APK',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp',downloadUrl:'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666'},
-        {id:53,name:'Cat Runner',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Cat-Runner-MOD-APK%20(2)1.webp',downloadUrl:'https://getmodsapk.com/dl-track/cat-runner-mod-apk/212522'},
-        {id:54,name:'Hot Slide',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',downloadUrl:'https://getmodsapk.com/dl-track/hot-slide-mod-apk/210984'},
-        {id:55,name:'CarX Highway Racing',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',downloadUrl:'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881'},
-        {id:56,name:'Invasion: Aerial Warfare',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',downloadUrl:'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877'},
-        {id:57,name:'Tacticool',category:'Game',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
+        {id:52,name:'Tennis Clash v6.18.2 MOD APK',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp',downloadUrl:'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666'},
+        {id:53,name:'Cat Runner',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Cat-Runner-MOD-APK%20(2)1.webp',downloadUrl:'https://getmodsapk.com/dl-track/cat-runner-mod-apk/212522'},
+        {id:54,name:'Hot Slide',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',downloadUrl:'https://getmodsapk.com/dl-track/hot-slide-mod-apk/210984'},
+        {id:55,name:'CarX Highway Racing',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',downloadUrl:'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881'},
+        {id:56,name:'Invasion: Aerial Warfare',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',downloadUrl:'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877'},
+        {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
     ];
     
     const categories = [...new Set(dummyApps.map(a => a.category))];
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'အထူးအသားပေး', icon: 'star', category: 'Featured' },
         { name: 'ဖျော်ဖြေရေး', icon: 'movie', category: 'Entertainment' },
         { name: 'Development', icon: 'code', category: 'Development' },
-        { name: 'Games', icon: 'build', category: 'Game' },
+        { name: 'Games', icon: 'sports_esports', category: 'Games' },
         { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
     ];
 
@@ -89,9 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', e => {
                 const newFilter = e.currentTarget.dataset.category;
                 if (newFilter === 'Featured') {
-                    // Scroll to featured section
                     featuredContainer.scrollIntoView({ behavior: 'smooth' });
-                    // Don't change the filter for the main grid
                     return;
                 }
                 currentFilter = newFilter;
