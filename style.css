@@ -5,6 +5,11 @@ body {
     overflow-x: hidden;
 }
 
+#main-content-area {
+    /* New: Ensure main content is scrollable */
+    overflow-x: hidden;
+}
+
 .app-card-bg-image {
     background-size: cover;
     background-position: center;
