@@ -4,55 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WY App Store</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="bg-white min-h-screen font-sans text-gray-800">
-    <!-- Header -->
     <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex items-center justify-between">
-            <div>
+        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+            <div class="text-center sm:text-left">
                 <h1 class="text-base font-bold">WY App Store</h1>
                 <h2 class="text-xs font-normal">c388925@gmail.com</h2>
             </div>
-            <div>
-                <input type="text" id="search-input" placeholder="အက်ပ်များကိုရှာရန်"
-                       class="px-4 py-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-blue-300 w-full sm:w-48">
+            <div class="w-full sm:w-auto">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="အက်ပ်များကိုရှာရန်"
+                           class="w-full px-4 py-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-blue-300 pl-10">
+                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-10">
-        <div id="category-nav" class="container mx-auto flex overflow-x-auto whitespace-nowrap py-3 px-4 sm:px-6 lg:px-8">
-            <!-- Category buttons injected by JS -->
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <!-- Featured Apps Section -->
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8 mb-20">
         <h2 class="text-2xl font-bold mb-4">အထူးအသားပေးအက်ပ်များ</h2>
-        <div id="featured-app-list-container" class="flex overflow-hidden relative w-full scroll-smooth">
-            <!-- Featured app cards injected by JS -->
-        </div>
+        <div id="featured-app-list-container" class="flex overflow-x-hidden relative w-full snap-x snap-mandatory scroll-smooth">
+            </div>
 
-        <!-- All Apps Section -->
         <h2 class="text-2xl font-bold mt-8 mb-4">အက်ပ်အားလုံး</h2>
         <div id="all-app-list-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <!-- All app cards injected by JS -->
-        </div>
+            </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 text-gray-600 py-4 mt-8">
-        <div class="container mx-auto text-center text-sm">
-            &copy; 2025 WY App Store. အခွင့်အရေးအားလုံးကို သီးသန့်ပိုင်ဆိုင်ပါသည်။
-        </div>
-    </footer>
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 w-full bg-white shadow-lg z-20 transition-transform duration-300 ease-in-out">
+        <div id="category-nav" class="flex justify-around items-center h-16">
+            </div>
+    </nav>
 
     <script src="script.js"></script>
 </body>
