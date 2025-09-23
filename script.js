@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
         cloudinaryVideoUrl: 'https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4',
         images: [
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Entertainment', icon: 'movie', category: 'Entertainment' },
         { name: 'Development', icon: 'code', category: 'Development' },
         { name: 'Games', icon: 'sports_esports', category: 'Games' },
-        { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
+        { name: 'Modified', icon: 'edit_note', category: 'Modified Apps' },
         { name: 'Featured', icon: 'star', category: 'Featured' },
     ];
 
