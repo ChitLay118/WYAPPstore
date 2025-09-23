@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryNav = document.getElementById('category-nav');
     const searchInput = document.getElementById('search-input');
     const mainContent = document.querySelector('main');
+    const featuredModal = document.getElementById('featured-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const featuredContent = document.getElementById('featured-content');
 
     let currentFilter = 'All Apps';
     let currentSearchTerm = '';
@@ -72,6 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
     ];
     
+    // Example data for the Featured App Screen (New)
+    const featuredAppData = {
+        name: 'Featured App Name',
+        youtubeVideoId: 'o0eUf51q7B4', // Example YouTube video ID
+        images: [
+            { url: 'https://i.ibb.co/1G1CxCvL/photo-2025-09-18-11-23-30.jpg', downloadUrl: 'https://www.mediafire.com/file/sek461p93u6xi9n/MOVIES_HUB_PREMIUM_v2.3.8d_Modded_by_%2540Getmodpcs.apk/file' },
+            { url: 'https://i.ibb.co/qMZXnKhQ/photo-2025-09-18-15-12-57.jpg', downloadUrl: 'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file' },
+            { url: 'https://i.ibb.co/C5HfBgMq/photo-2025-09-18-15-12-48.jpg', downloadUrl: 'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file' },
+            { url: 'https://i.ibb.co/mrVk51Y5/photo-2025-09-18-15-12-22.jpg', downloadUrl: 'https://www.mediafire.com/file/ri34hjh84h7456p/Picsart_Premium_Gold_v29.3.2_Modded_by_%2540Getmodpcs.apk/file' },
+        ]
+    };
+
     const categories = [...new Set(dummyApps.map(a => a.category))];
     const navItems = [
         { name: 'အက်ပ်အားလုံး', icon: 'apps', category: 'All Apps' },
@@ -94,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', e => {
                 const newFilter = e.currentTarget.dataset.category;
                 if (newFilter === 'Featured') {
-                    featuredContainer.scrollIntoView({ behavior: 'smooth' });
+                    showFeaturedScreen();
                     return;
                 }
                 currentFilter = newFilter;
@@ -197,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (newIndex >= 0 && newIndex < navItems.length) {
             const newFilter = navItems[newIndex].category;
             if (newFilter === 'Featured') {
-                featuredContainer.scrollIntoView({ behavior: 'smooth' });
+                showFeaturedScreen();
                 return;
             }
             currentFilter = newFilter;
@@ -228,5 +243,57 @@ document.addEventListener('DOMContentLoaded', () => {
                 changeTab(-1);
             }
         }
+    });
+
+    // New Functions for Featured Screen
+    function showFeaturedScreen() {
+      // Clear previous content
+      featuredContent.innerHTML = '';
+
+      // Create Video Player Section
+      const videoSection = document.createElement('div');
+      videoSection.innerHTML = `
+          <h4 class="text-lg font-semibold mb-2">${featuredAppData.name} Promo</h4>
+          <div class="relative w-full h-40 md:h-64 rounded-lg overflow-hidden">
+              <iframe
+                  class="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/${featuredAppData.youtubeVideoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+              ></iframe>
+          </div>
+      `;
+      featuredContent.appendChild(videoSection);
+
+      // Create Photo Slider Section
+      const photoSection = document.createElement('div');
+      photoSection.innerHTML = `
+          <h4 class="text-lg font-semibold mb-2 mt-4">Screenshots & Photos</h4>
+          <div class="image-slider-container">
+              <div class="image-slider">
+                  ${featuredAppData.images.map(img => `
+                      <div class="slider-image-wrapper">
+                          <img src="${img.url}" alt="Screenshot" class="rounded-lg" />
+                          <a href="${img.downloadUrl}" class="download-icon">
+                              <span class="material-icons">file_download</span>
+                          </a>
+                      </div>
+                  `).join('')}
+              </div>
+          </div>
+      `;
+      featuredContent.appendChild(photoSection);
+
+      featuredModal.classList.remove('hidden');
+    }
+
+    closeModalBtn.addEventListener('click', () => {
+      featuredModal.classList.add('hidden');
+      // Stop the video when the modal is closed
+      const iframe = featuredContent.querySelector('iframe');
+      if (iframe) {
+        iframe.src = '';
+      }
     });
 });
