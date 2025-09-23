@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('main');
     const featuredModal = document.getElementById('featured-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
+    const featuredVideoSection = document.getElementById('featured-video-section');
     const featuredContent = document.getElementById('featured-content');
+    const modalTitle = document.getElementById('modal-title');
+    const fullscreenModal = document.getElementById('fullscreen-modal');
+    const closeFullscreenBtn = document.getElementById('close-fullscreen-btn');
+    const fullscreenImageContainer = document.getElementById('fullscreen-image-container');
 
     let currentFilter = 'All Apps';
     let currentSearchTerm = '';
@@ -30,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
         {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%80%25B8.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%80%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%2580%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -75,10 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
     ];
     
-    // Example data for the Featured App Screen (New)
+    // Example data for the Featured App Screen
     const featuredAppData = {
         name: 'Featured App Name',
-        youtubeVideoId: 'o0eUf51q7B4', // Example YouTube video ID
+        description: 'This is a great app for entertainment and more. Download now and enjoy!',
+        youtubeVideoId: '18oH4jQvO88', // Example YouTube video ID
         images: [
             { url: 'https://i.ibb.co/1G1CxCvL/photo-2025-09-18-11-23-30.jpg', downloadUrl: 'https://www.mediafire.com/file/sek461p93u6xi9n/MOVIES_HUB_PREMIUM_v2.3.8d_Modded_by_%2540Getmodpcs.apk/file' },
             { url: 'https://i.ibb.co/qMZXnKhQ/photo-2025-09-18-15-12-57.jpg', downloadUrl: 'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file' },
@@ -249,51 +255,79 @@ document.addEventListener('DOMContentLoaded', () => {
     function showFeaturedScreen() {
       // Clear previous content
       featuredContent.innerHTML = '';
+      featuredVideoSection.innerHTML = '';
+      modalTitle.textContent = featuredAppData.name;
 
       // Create Video Player Section
-      const videoSection = document.createElement('div');
-      videoSection.innerHTML = `
-          <h4 class="text-lg font-semibold mb-2">${featuredAppData.name} Promo</h4>
-          <div class="relative w-full h-40 md:h-64 rounded-lg overflow-hidden">
+      featuredVideoSection.innerHTML = `
+          <div class="relative w-full h-full">
               <iframe
                   class="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/${featuredAppData.youtubeVideoId}?autoplay=1&controls=0&modestbranding=1&rel=0"
+                  src="https://www.youtube.com/embed/${featuredAppData.youtubeVideoId}?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${featuredAppData.youtubeVideoId}"
                   frameborder="0"
                   allow="autoplay; encrypted-media"
                   allowfullscreen
               ></iframe>
           </div>
       `;
-      featuredContent.appendChild(videoSection);
 
       // Create Photo Slider Section
       const photoSection = document.createElement('div');
       photoSection.innerHTML = `
-          <h4 class="text-lg font-semibold mb-2 mt-4">Screenshots & Photos</h4>
-          <div class="image-slider-container">
-              <div class="image-slider">
-                  ${featuredAppData.images.map(img => `
-                      <div class="slider-image-wrapper">
-                          <img src="${img.url}" alt="Screenshot" class="rounded-lg" />
-                          <a href="${img.downloadUrl}" class="download-icon">
-                              <span class="material-icons">file_download</span>
-                          </a>
-                      </div>
-                  `).join('')}
-              </div>
+          <h4 class="text-lg font-semibold mb-2">Screenshots & Photos</h4>
+          <div class="image-slider">
+              ${featuredAppData.images.map((img, index) => `
+                  <div class="slider-image-wrapper" data-index="${index}">
+                      <img src="${img.url}" alt="Screenshot" class="rounded-lg" />
+                      <a href="${img.downloadUrl}" class="download-icon" onclick="event.stopPropagation()">
+                          <span class="material-icons">file_download</span>
+                      </a>
+                  </div>
+              `).join('')}
           </div>
+          <p class="text-sm mt-4 text-gray-600">${featuredAppData.description}</p>
       `;
       featuredContent.appendChild(photoSection);
-
+      
       featuredModal.classList.remove('hidden');
+      
+      // Add event listeners for images in the slider
+      document.querySelectorAll('.slider-image-wrapper').forEach(imgWrapper => {
+          imgWrapper.addEventListener('click', e => {
+              const index = parseInt(e.currentTarget.dataset.index);
+              showFullscreenImage(index);
+          });
+      });
     }
 
     closeModalBtn.addEventListener('click', () => {
       featuredModal.classList.add('hidden');
-      // Stop the video when the modal is closed
-      const iframe = featuredContent.querySelector('iframe');
+      const iframe = featuredVideoSection.querySelector('iframe');
       if (iframe) {
         iframe.src = '';
       }
+    });
+    
+    // New Functions for Fullscreen Image View
+    function showFullscreenImage(startIndex) {
+        fullscreenImageContainer.innerHTML = `
+            <div class="image-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory">
+                ${featuredAppData.images.map(img => `
+                    <div class="fullscreen-image-wrapper">
+                        <img src="${img.url}" alt="Fullscreen Image" />
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        fullscreenModal.classList.remove('hidden');
+
+        // Scroll to the selected image
+        const slider = fullscreenImageContainer.querySelector('.image-slider');
+        const imageWidth = slider.querySelector('.fullscreen-image-wrapper').offsetWidth;
+        slider.scrollLeft = imageWidth * startIndex;
+    }
+    
+    closeFullscreenBtn.addEventListener('click', () => {
+        fullscreenModal.classList.add('hidden');
     });
 });
