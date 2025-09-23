@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categories = [...new Set(dummyApps.map(a => a.category))];
     const navItems = [
-        { name: 'All Apps', icon: 'apps', category: 'All Apps' },
+        { name: 'AllApps', icon: 'apps', category: 'All Apps' },
         { name: 'Featured', icon: 'star', category: 'Featured' },
         { name: 'Entertaiment', icon: 'movie', category: 'Entertainment' },
         { name: 'Development', icon: 'code', category: 'Development' },
