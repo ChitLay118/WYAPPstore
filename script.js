@@ -11,10 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const fullscreenModal = document.getElementById('fullscreen-modal');
     const closeFullscreenBtn = document.getElementById('close-fullscreen-btn');
+    const saveFullscreenBtn = document.getElementById('save-fullscreen-btn');
     const fullscreenImageContainer = document.getElementById('fullscreen-image-container');
 
     let currentFilter = 'All Apps';
     let currentSearchTerm = '';
+    let currentImageUrls = [];
+    let currentIndex = 0;
     
     // Swipe gesture variables
     let touchStartX = 0;
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
         {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%80%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%2580%25B8.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%2580%25BA%25E1%2580%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -80,16 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
     ];
     
-    // Example data for the Featured App Screen
+    // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
-        name: 'Featured App Name',
-        description: 'This is a great app for entertainment and more. Download now and enjoy!',
+        name: 'CapCut Pro',
+        description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
         youtubeVideoId: '18oH4jQvO88', // Example YouTube video ID
         images: [
-            { url: 'https://i.ibb.co/1G1CxCvL/photo-2025-09-18-11-23-30.jpg', downloadUrl: 'https://www.mediafire.com/file/sek461p93u6xi9n/MOVIES_HUB_PREMIUM_v2.3.8d_Modded_by_%2540Getmodpcs.apk/file' },
-            { url: 'https://i.ibb.co/qMZXnKhQ/photo-2025-09-18-15-12-57.jpg', downloadUrl: 'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file' },
-            { url: 'https://i.ibb.co/C5HfBgMq/photo-2025-09-18-15-12-48.jpg', downloadUrl: 'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file' },
-            { url: 'https://i.ibb.co/mrVk51Y5/photo-2025-09-18-15-12-22.jpg', downloadUrl: 'https://www.mediafire.com/file/ri34hjh84h7456p/Picsart_Premium_Gold_v29.3.2_Modded_by_%2540Getmodpcs.apk/file' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
         ]
     };
 
@@ -271,17 +275,17 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
       `;
 
-      // Create Photo Slider Section
+      // Create Photo List Section
       const photoSection = document.createElement('div');
       photoSection.innerHTML = `
           <h4 class="text-lg font-semibold mb-2">Screenshots & Photos</h4>
-          <div class="image-slider">
+          <div class="image-list-container">
               ${featuredAppData.images.map((img, index) => `
-                  <div class="slider-image-wrapper" data-index="${index}">
-                      <img src="${img.url}" alt="Screenshot" class="rounded-lg" />
-                      <a href="${img.downloadUrl}" class="download-icon" onclick="event.stopPropagation()">
-                          <span class="material-icons">file_download</span>
-                      </a>
+                  <div class="image-list-item" data-index="${index}" data-download-url="${img.downloadUrl}">
+                      <img src="${img.url}" alt="Screenshot" class="main-image" />
+                      <div class="app-logo" onclick="event.stopPropagation(); window.location.href='${img.downloadUrl}'">
+                          <img src="${img.logoUrl}" alt="App Logo" />
+                      </div>
                   </div>
               `).join('')}
           </div>
@@ -291,9 +295,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       featuredModal.classList.remove('hidden');
       
-      // Add event listeners for images in the slider
-      document.querySelectorAll('.slider-image-wrapper').forEach(imgWrapper => {
-          imgWrapper.addEventListener('click', e => {
+      // Add event listeners for images in the list
+      document.querySelectorAll('.image-list-item').forEach(item => {
+          item.addEventListener('click', e => {
               const index = parseInt(e.currentTarget.dataset.index);
               showFullscreenImage(index);
           });
@@ -310,24 +314,46 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // New Functions for Fullscreen Image View
     function showFullscreenImage(startIndex) {
+        currentImageUrls = featuredAppData.images.map(img => img.url);
+        currentIndex = startIndex;
+        
         fullscreenImageContainer.innerHTML = `
             <div class="image-slider flex w-full h-full overflow-x-auto snap-x snap-mandatory">
-                ${featuredAppData.images.map(img => `
+                ${currentImageUrls.map(url => `
                     <div class="fullscreen-image-wrapper">
-                        <img src="${img.url}" alt="Fullscreen Image" />
+                        <img src="${url}" alt="Fullscreen Image" />
                     </div>
                 `).join('')}
             </div>
         `;
         fullscreenModal.classList.remove('hidden');
 
-        // Scroll to the selected image
         const slider = fullscreenImageContainer.querySelector('.image-slider');
         const imageWidth = slider.querySelector('.fullscreen-image-wrapper').offsetWidth;
         slider.scrollLeft = imageWidth * startIndex;
+        
+        // Update currentIndex on scroll
+        slider.addEventListener('scroll', () => {
+            const newIndex = Math.round(slider.scrollLeft / imageWidth);
+            currentIndex = newIndex;
+        });
     }
     
     closeFullscreenBtn.addEventListener('click', () => {
         fullscreenModal.classList.add('hidden');
+    });
+    
+    saveFullscreenBtn.addEventListener('click', () => {
+        const imageUrl = currentImageUrls[currentIndex];
+        if (imageUrl) {
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = `image-${currentIndex + 1}.jpg`; // Set a default file name
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            alert('Saving image...');
+        }
     });
 });
