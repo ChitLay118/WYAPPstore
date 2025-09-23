@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredAppData = {
         name: 'CapCut Pro',
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
-        youtubeVideoId: '18oH4jQvO88', // Example YouTube video ID
+        cloudinaryVideoUrl: 'https://player.cloudinary.com/embed/?cloud_name=drizdw5nc&public_id=waiyanintro_grblpy&profile=cld-default.mp4',
         images: [
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/V0qtzQRg/photo-2025-09-18-12-29-17.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
         ]
     };
 
@@ -262,16 +262,13 @@ document.addEventListener('DOMContentLoaded', () => {
       featuredVideoSection.innerHTML = '';
       modalTitle.textContent = featuredAppData.name;
 
-      // Create Video Player Section
+      // Create Video Player Section using Cloudinary
       featuredVideoSection.innerHTML = `
           <div class="relative w-full h-full">
-              <iframe
-                  class="absolute top-0 left-0 w-full h-full"
-                  src="https://www.youtube.com/embed/${featuredAppData.youtubeVideoId}?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=${featuredAppData.youtubeVideoId}"
-                  frameborder="0"
-                  allow="autoplay; encrypted-media"
-                  allowfullscreen
-              ></iframe>
+              <video class="absolute top-0 left-0 w-full h-full" controls autoplay loop>
+                <source src="${featuredAppData.cloudinaryVideoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
           </div>
       `;
 
@@ -306,9 +303,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeModalBtn.addEventListener('click', () => {
       featuredModal.classList.add('hidden');
-      const iframe = featuredVideoSection.querySelector('iframe');
-      if (iframe) {
-        iframe.src = '';
+      const video = featuredVideoSection.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
       }
     });
     
