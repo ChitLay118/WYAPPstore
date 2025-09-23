@@ -93,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
             { url: 'https://t4.ftcdn.net/jpg/00/66/08/39/240_F_66083932_5ELudVIJNu0aXjduga31AE5SP9Tz9MD4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://t3.ftcdn.net/jpg/01/11/13/34/240_F_111133478_8zcpx6GsDj1qCLitqT4NwH6n4imfvbCt.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://t3.ftcdn.net/jpg/02/67/80/80/240_F_267808017_gNUy2EScY6NKJw7mwN5OLsdaN6CzRigx.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t4.ftcdn.net/jpg/00/57/43/49/240_F_57434922_TsYjMMiEuxsRUDWgTjvrmeJ61UE1BC6U.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+        
         ]
     };
     
