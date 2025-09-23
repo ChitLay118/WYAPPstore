@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const fullscreenModal = document.getElementById('fullscreen-modal');
     const closeFullscreenBtn = document.getElementById('close-fullscreen-btn');
-    const saveFullscreenBtn = document.getElementById('save-fullscreen-btn');
     const fullscreenImageContainer = document.getElementById('fullscreen-image-container');
 
     let currentFilter = 'All Apps';
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
         {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%80%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%80%258A%25E1%2580%25BA%25E1%2580%25B8.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%80%25BA%25E1%80%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -85,13 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
-        name: 'WaiYan',
+        name: 'CapCut Pro',
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
-        // Replace with your Cloudinary embed link
-        cloudinaryVideoUrl: 'https://player.cloudinary.com/embed/?cloud_name=drizdw5nc&public_id=waiyanintro_grblpy&profile=cld-default',
+        cloudinaryVideoUrl: 'https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4',
         images: [
-            { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMUfMLT_eITKnstssKKNDrQy5YNLKMXUf9g&s', logoUrl: 'https://getmodsapk.com/storage/CapCut%20%20MOD%20APK7.webp', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVymB4IGcBQ11uztbHxF2kCZBICRhkG1dyxw&s', logoUrl: 'https://i.ibb.co/PZ1GSxbs/download.jpg', downloadUrl: 'https://www.mediafire.com/file/ngbm1qfsyge6fuh/Canva_v2.206.0_MOD.apk/file' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
@@ -263,16 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
       featuredVideoSection.innerHTML = '';
       modalTitle.textContent = featuredAppData.name;
 
-      // Create Video Player Section using Cloudinary embed link
+      // Create Video Player Section using Cloudinary
       featuredVideoSection.innerHTML = `
           <div class="relative w-full h-full">
-              <iframe
-                  class="absolute top-0 left-0 w-full h-full"
-                  src="${featuredAppData.cloudinaryVideoUrl}"
-                  allow="autoplay; fullscreen; encrypted-media"
-                  allowfullscreen
-                  frameborder="0"
-              ></iframe>
+              <video class="absolute top-0 left-0 w-full h-full" controls autoplay loop>
+                <source src="${featuredAppData.cloudinaryVideoUrl}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
           </div>
       `;
 
@@ -282,9 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4 class="text-lg font-semibold mb-2">Screenshots & Photos</h4>
           <div class="image-list-container">
               ${featuredAppData.images.map((img, index) => `
-                  <div class="image-list-item" data-index="${index}" data-download-url="${img.downloadUrl}">
+                  <div class="image-list-item" data-index="${index}">
                       <img src="${img.url}" alt="Screenshot" class="main-image" />
-                      <div class="app-logo" onclick="event.stopPropagation(); window.location.href='${img.downloadUrl}'">
+                      <div class="app-logo">
                           <img src="${img.logoUrl}" alt="App Logo" />
                       </div>
                   </div>
@@ -307,10 +302,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeModalBtn.addEventListener('click', () => {
       featuredModal.classList.add('hidden');
-      // To stop the video from playing when the modal is closed
-      const iframe = featuredVideoSection.querySelector('iframe');
-      if (iframe) {
-        iframe.src = iframe.src; 
+      const video = featuredVideoSection.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
       }
     });
     
@@ -334,28 +329,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageWidth = slider.querySelector('.fullscreen-image-wrapper').offsetWidth;
         slider.scrollLeft = imageWidth * startIndex;
         
-        // Update currentIndex on scroll
-        slider.addEventListener('scroll', () => {
-            const newIndex = Math.round(slider.scrollLeft / imageWidth);
-            currentIndex = newIndex;
+        // Add swipe functionality to the image slider
+        let imageTouchStartX = 0;
+        let imageTouchEndX = 0;
+        
+        slider.addEventListener('touchstart', e => {
+            imageTouchStartX = e.changedTouches[0].screenX;
+        });
+        
+        slider.addEventListener('touchend', e => {
+            imageTouchEndX = e.changedTouches[0].screenX;
+            const swipeDistance = imageTouchEndX - imageTouchStartX;
+            
+            if (swipeDistance < -50) {
+                // Swipe left
+                const newIndex = Math.min(currentIndex + 1, currentImageUrls.length - 1);
+                slider.scrollTo({ left: slider.offsetWidth * newIndex, behavior: 'smooth' });
+                currentIndex = newIndex;
+            } else if (swipeDistance > 50) {
+                // Swipe right
+                const newIndex = Math.max(currentIndex - 1, 0);
+                slider.scrollTo({ left: slider.offsetWidth * newIndex, behavior: 'smooth' });
+                currentIndex = newIndex;
+            }
         });
     }
     
     closeFullscreenBtn.addEventListener('click', () => {
         fullscreenModal.classList.add('hidden');
-    });
-    
-    saveFullscreenBtn.addEventListener('click', () => {
-        const imageUrl = currentImageUrls[currentIndex];
-        if (imageUrl) {
-            // Create a temporary link element
-            const link = document.createElement('a');
-            link.href = imageUrl;
-            link.download = `image-${currentIndex + 1}.jpg`; // Set a default file name
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            alert('Saving image...');
-        }
     });
 });
