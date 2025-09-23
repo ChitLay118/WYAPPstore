@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
-        name: 'CapCut Pro',
+        name: 'WaiYan',
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
         // Replace with your Cloudinary embed link
         cloudinaryVideoUrl: 'https://player.cloudinary.com/embed/?cloud_name=drizdw5nc&public_id=waiyanintro_grblpy&profile=cld-default',
         images: [
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbMUfMLT_eITKnstssKKNDrQy5YNLKMXUf9g&s', logoUrl: 'https://getmodsapk.com/storage/CapCut%20%20MOD%20APK7.webp', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVymB4IGcBQ11uztbHxF2kCZBICRhkG1dyxw&s', logoUrl: 'https://i.ibb.co/PZ1GSxbs/download.jpg', downloadUrl: 'https://www.mediafire.com/file/ngbm1qfsyge6fuh/Canva_v2.206.0_MOD.apk/file' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
             { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
