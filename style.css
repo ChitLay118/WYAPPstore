@@ -85,3 +85,52 @@ body {
     font-size: 24px;
     margin-bottom: 2px;
 }
+
+/* New Styles for Image Slider */
+.image-slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-slider {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slider-image-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+    height: 150px; /* Equivalent to 150dp */
+    position: relative;
+    scroll-snap-align: center;
+    margin-right: 16px;
+}
+
+.slider-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.download-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.download-icon .material-icons {
+    font-size: 20px;
+    color: white;
+}
