@@ -80,29 +80,34 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:55,name:'CarX Highway Racing',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',downloadUrl:'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881'},
         {id:56,name:'Invasion: Aerial Warfare',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',downloadUrl:'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877'},
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
+        {id:58,name:'Perplexity',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Perplexity-MOD-APK1.webp',downloadUrl:'https://getmodsapk.com/dl-track/perplexity-mod-apk/216287', downloadCount: 2800},
+        {id:59,name:'ChatOn',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/ChatOn%20MOD%20APK%20(1)4.webp',downloadUrl:'https://getmodsapk.com/dl-track/chaton-mod-apk/207576', downloadCount: 2000},
+        {id:60,name:'AI Future Baby',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Cosplay%20MOD%20APK2.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-hidden-face-cosplay-app-mod-apk/214571', downloadCount: 1700},
+        {id:61,name:'AI Video Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/AI-Video-Generator-MOD-APK6.webp',downloadUrl:'https://getmodsapk.com/dl-track/6584-ai-video-generator-mod-apk/206318', downloadCount: 2200},
+        {id:62,name:'AI Image Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/8/ai-image-generator-mod-apk.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-image-generator-mod-apk/166352', downloadCount: 3000},
     ];
 
     // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
-        name: 'CapCut Pro',
+        name: 'WaiYan',
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
         cloudinaryVideoUrl: 'https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4',
         images: [
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot1.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot2.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot3.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
-            { url: 'https://i.ibb.co/3s1k8xR/capcut-screenshot5.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t3.ftcdn.net/jpg/02/19/66/00/240_F_219660072_u3paAvIp1a6zfLAThJji1b8GnYfoQGcB.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t4.ftcdn.net/jpg/01/62/54/13/240_F_162541349_zCXAFhpGxVnnEu5x5XoRrbVG1LwX9pey.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t4.ftcdn.net/jpg/00/66/08/39/240_F_66083932_5ELudVIJNu0aXjduga31AE5SP9Tz9MD4.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t3.ftcdn.net/jpg/01/11/13/34/240_F_111133478_8zcpx6GsDj1qCLitqT4NwH6n4imfvbCt.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t3.ftcdn.net/jpg/02/67/80/80/240_F_267808017_gNUy2EScY6NKJw7mwN5OLsdaN6CzRigx.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
+            { url: 'https://t4.ftcdn.net/jpg/00/57/43/49/240_F_57434922_TsYjMMiEuxsRUDWgTjvrmeJ61UE1BC6U.jpg', logoUrl: 'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg', downloadUrl: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326' },
         ]
-    };
 
     const navItems = [
-        { name: 'အက်ပ်အားလုံး', icon: 'apps', category: 'All Apps' },
-        { name: 'ဖျော်ဖြေရေး', icon: 'movie', category: 'Entertainment' },
+        { name: 'AllApp', icon: 'apps', category: 'All Apps' },
+        { name: 'Entertainment', icon: 'movie', category: 'Entertainment' },
         { name: 'Development', icon: 'code', category: 'Development' },
         { name: 'Games', icon: 'sports_esports', category: 'Games' },
-        { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
-        { name: 'အထူးအသားပေး', icon: 'star', category: 'Featured' },
+        { name: 'Modified', icon: 'edit_note', category: 'Modified Apps' },
+        { name: 'Featured', icon: 'star', category: 'Featured' },
     ];
 
     function renderNav() {
