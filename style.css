@@ -87,3 +87,6 @@
     cursor: pointer;
     z-index: 60;
 }
+.bottom-nav-item.active {
+    color: #3b82f6; /* Tailwind's blue-500 */
+}
