@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchEndX = 0;
 
     const dummyApps = [
-        {id:1,name:'Netflix Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/netflix-150x150.jpg',bgImageUrl:'https://i.ibb.co/jkqNvDqR/pexels-dreamypixel-547114.jpg',downloadUrl:'https://files.modyolo.com/Netflix./Netflix%20v9.34.0%20MOD.apk'},
-        {id:2,name:'Spotify Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/11/spotify-apk-mod-premium-150x150.png',bgImageUrl:'https://i.ibb.co/dstKxsX4/pexels-mccutcheon-1191710.jpg',downloadUrl:'https://files.modyolo.com/Spotify/Spotify_%20v9.0.82.1008%20x.xapk'},
+        {id:2,name:'Spotify Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/11/spotify-apk-mod-premium-150x150.png',bgImageUrl:'https://i.ibb.co/cKhfR7n6/download.jpg',downloadUrl:'https://www.mediafire.com/file/zrs2bpa6yqb3xsi/Netflix-v9.35.1%2528WYappstore%2529.apk/file'},
+        {id:1,name:'Netflix Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://i.ibb.co/63jBBWB/NETFLIX-MOD-APK2.webp',bgImageUrl:'https://i.ibb.co/dstKxsX4/pexels-mccutcheon-1191710.jpg',downloadUrl:'https://files.modyolo.com/Spotify/Spotify_%20v9.0.82.1008%20x.xapk'},
         {id:3,name:'WY AppStore',category:'Modified Apps',isFeatured:true,iconUrl:'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg',bgImageUrl:'https://i.ibb.co/XHJwdsm/pexels-umkreisel-app-956999.jpg',downloadUrl:'https://www.mediafire.com/file/n8ohx9xnfisynuw/WY_App_Store.apk/file'},
         {id:4,name:'Sketchware Pro',category:'Development',isFeatured:true,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',bgImageUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:5,name:'AIDE Pro 2.8',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/8CPMDm7/photo-2025-09-18-07-50-07.jpg',downloadUrl:'https://www.mediafire.com/file/rh85g28nbmnur3f/AIDE_Pro_2.8.7-freely.apk/file'},
