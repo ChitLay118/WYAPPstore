@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const navItems = [
-        { name: 'အက်ပ်အားလုံး', icon: 'apps', category: 'All Apps' },
-        { name: 'ဖျော်ဖြေရေး', icon: 'movie', category: 'Entertainment' },
+        { name: 'AllApp', icon: 'apps', category: 'All Apps' },
+        { name: 'Entertainment', icon: 'movie', category: 'Entertainment' },
         { name: 'Development', icon: 'code', category: 'Development' },
         { name: 'Games', icon: 'sports_esports', category: 'Games' },
-        { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
-        { name: 'အထူးအသားပေး', icon: 'star', category: 'Featured' },
+        { name: 'Modified', icon: 'edit_note', category: 'Modified Apps' },
+        { name: 'Featured', icon: 'star', category: 'Featured' },
     ];
 
     function renderNav() {
