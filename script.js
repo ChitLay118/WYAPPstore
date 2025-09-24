@@ -85,11 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:60,name:'AI Future Baby',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Cosplay%20MOD%20APK2.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-hidden-face-cosplay-app-mod-apk/214571'},
         {id:61,name:'AI Video Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/AI-Video-Generator-MOD-APK6.webp',downloadUrl:'https://getmodsapk.com/dl-track/6584-ai-video-generator-mod-apk/206318'},
         {id:62,name:'AI Image Generator',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/8/ai-image-generator-mod-apk.webp',downloadUrl:'https://getmodsapk.com/dl-track/ai-image-generator-mod-apk/166352'},
+        {id:63,name:'Amazon Prime Video',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/amazon-prime-video-150x150.jpg',downloadUrl:'https://files.modyolo.com/Amazon%20Prime%20Video/Amazon_Prime_Video_%20v3.0.424.547%20_MOD.apk'},
+        {id:64,name:'VPN Inf – Security Fast VPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2022/06/vpn-inf-security-fast-vpn-150x150.jpg',downloadUrl:'https://files.modyolo.com/VPN%20Inf/VPN_Inf%20_%20v7.8.616%20_MOD.apk'},
+        {id:65,name:'Melon VPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2023/06/melon-vpn-unblock-proxy-vpn-150x150.jpg',downloadUrl:'https://files.modyolo.com/Melon%20VPN/Melon_VPN_%20v9.0.090%20_MOD.apk'},
+        {id:66,name:'ExpressVPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/11/expressvpn-trusted-secure-150x150.jpg',downloadUrl:'https://files.modyolo.com/ExpressVPN/ExpressVPN_%20v12.30.0%20x.apk'},
+        {id:67,name:'Proton VPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2022/07/proton-vpn-private-secure-150x150.jpg',downloadUrl:'https://files.modyolo.com/Proton%20VPN/Proton_VPN_%20v5.13.19.0%20x.xapk'},
+        {id:67,name:'Super VPN Proxy',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/5/super-vpn-proxy-mod-apk-5.webp',downloadUrl:'https://getmodsapk.com/dl-track/super-vpn-proxy-mod-apk/218256'},
     ];
 
     // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
-        name: 'CapCut Pro',
+        name: 'WaiYan',
         description: 'CapCut Pro is a popular video editing app with powerful tools and features. You can edit videos with professional effects and filters. The pro version unlocks all premium features and removes watermarks.',
         cloudinaryVideoUrl: 'https://res.cloudinary.com/drizdw5nc/video/upload/v1758620300/video_2025-09-23_16-38-00_r3ow5d.mp4',
         images: [
