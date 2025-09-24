@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:70,name:'Mobile Legends(Skin Hack, Unlimited Diamonds)',category:'Games',isFeatured:false,iconUrl:'https://apkresult.io/wp-content/uploads/2022/08/mobile-legends-bang-bang-150x150.png',downloadUrl:'https://cdn902.onehost.io/2023/Mobile_Legends_Bang_Bang_22.1.18.11201_1758299760_latestmodapks.com.apk'},
         {id:71,name:'Appcreator24',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/yFXzwWps/1039250-ico.png',downloadUrl:'https://www.mediafire.com/file/dvat90wjipq4ldd/AppCreator%2528Wyappstore%2529.apk/file'},
         {id:72,name:'Appcreator24 Pro Beta',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/1Jnwrkdy/1211684-ico.png',downloadUrl:'https://www.mediafire.com/file/dj1ze1c8mksvvpm/Appcreator24_Pro_Beta%2528Wyappstore%2529.apk/file'},
+        {id:73,name:' အရောင်းစာရင်းမှတ်စု',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/tpnX9Mx7/photo-2025-09-24-21-27-54.jpg',downloadUrl:'https://www.mediafire.com/file/b5p7fc489tajra1/%25E1%2580%25A1%25E1%2580%259B%25E1%2580%25B1%25E1%2580%25AC%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2585%25E1%2580%25AC%25E1%2580%259B%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2599%25E1%2580%25BE%25E1%2580%2590%25E1%2580%25BA%25E1%2580%2585%25E1%2580%25AF.apk/file'},
     ];
 
     // Example data for the Featured App Screen (Modified)
