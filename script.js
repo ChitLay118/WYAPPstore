@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    // Initialize dummyApps with download counts from localStorage
-    const initialApps = [
+    const dummyApps = [
         {id:1,name:'Netflix Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/netflix-150x150.jpg',bgImageUrl:'https://i.ibb.co/jkqNvDqR/pexels-dreamypixel-547114.jpg',downloadUrl:'https://files.modyolo.com/Netflix./Netflix%20v9.34.0%20MOD.apk'},
         {id:2,name:'Spotify Premium',category:'Entertainment',isFeatured:true,iconUrl:'https://modyolo.com/wp-content/uploads/2021/11/spotify-apk-mod-premium-150x150.png',bgImageUrl:'https://i.ibb.co/dstKxsX4/pexels-mccutcheon-1191710.jpg',downloadUrl:'https://files.modyolo.com/Spotify/Spotify_%20v9.0.82.1008%20x.xapk'},
         {id:3,name:'WY AppStore',category:'Modified Apps',isFeatured:true,iconUrl:'https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg',bgImageUrl:'https://i.ibb.co/XHJwdsm/pexels-umkreisel-app-956999.jpg',downloadUrl:'https://www.mediafire.com/file/n8ohx9xnfisynuw/WY_App_Store.apk/file'},
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:12,name:'Sketchware Pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg',downloadUrl:'https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file'},
         {id:13,name:'Tiktok',category:'Entertainment',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/09/tiktok-150x150.jpg',downloadUrl:'https://files.modyolo.com/TikTok/TikTok_%20v41.8.15%20_MOD.apk'},
         {id:14,name:'AllKaBar',category:'Games',isFeatured:false,iconUrl:'https://i.ibb.co/yFYd4rgz/photo-2025-09-17-18-24-51.jpg',downloadUrl:'https://www.mediafire.com/file/wa3j36uolt9r8wx/AllKaBar.apk/file'},
-        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%80%2594%25E1%2580%258A%25E1%2580%25BA%25E1%80%25B8.apk/file'},
+        {id:15,name:'မြန်မာဟင်းချက်နည်းများ',size:'21.2 MB',rating:4.5,category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',downloadUrl:'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%80%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%2580%25BA%25E1%80%25B8.apk/file'},
         {id:16,name:'AIDE_3.2',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/cXQ8Xv7Q/photo-2025-09-18-07-50-00.jpg',downloadUrl:'https://www.mediafire.com/file/50xmjvul6rn6mwq/AIDE_3.2.191010-2.3.5.apk/file'},
         {id:17,name:'AIDE studio pro',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/Hkc3XGd/photo-2025-09-18-07-50-13.jpg',downloadUrl:'https://www.mediafire.com/file/o9mew8gh9e4r3g5/Aide_studio_pro.apk/file'},
         {id:18,name:'Developer Color Tool',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/HD9Fx72P/photo-2025-09-18-09-44-54.jpg',downloadUrl:'https://www.mediafire.com/file/oqy8bv69x90hk71/Developer_Color_Tool_1.2.apk/file'},
@@ -83,13 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:57,name:'Tacticool',category:'Games',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',downloadUrl:'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869'},
     ];
 
-    // Merge download counts from localStorage
-    const dummyApps = initialApps.map(app => {
-        const storedCount = localStorage.getItem(`app-downloads-${app.id}`);
-        app.downloadCount = storedCount ? parseInt(storedCount) : 0;
-        return app;
-    });
-
     // Example data for the Featured App Screen (Modified)
     const featuredAppData = {
         name: 'CapCut Pro',
@@ -112,13 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Modified Apps', icon: 'edit_note', category: 'Modified Apps' },
         { name: 'အထူးအသားပေး', icon: 'star', category: 'Featured' },
     ];
-
-    function formatDownloadCount(count) {
-        if (count >= 1000) {
-            return (count / 1000).toFixed(1) + 'K+';
-        }
-        return count;
-    }
 
     function renderNav() {
         categoryNav.innerHTML = navItems.map(item => `
@@ -161,10 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div>
                             <h3 class="text-lg font-bold">${app.name}</h3>
                             <p class="text-xs text-gray-200">${app.category}</p>
-                            <div class="flex items-center text-gray-200">
-                                <span class="material-icons text-base">download</span>
-                                <span class="ml-1 text-sm font-semibold">${formatDownloadCount(app.downloadCount)}</span>
-                            </div>
                         </div>
                     </div>
                 </a>
@@ -177,10 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <h3 class="text-base font-bold truncate w-full px-2">${app.name}</h3>
                     <p class="text-sm text-gray-500">${app.category}</p>
-                    <div class="flex items-center text-gray-600">
-                        <span class="material-icons text-base">download</span>
-                        <span class="ml-1 text-sm font-semibold" id="download-count-${app.id}">${formatDownloadCount(app.downloadCount)}</span>
-                    </div>
                     <a href="${app.downloadUrl}" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full text-center hover:bg-blue-700 transition-colors duration-200 w-full download-btn" data-app-id="${app.id}">
                         Download
                     </a>
@@ -190,24 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }).join('');
 
         container.innerHTML = html;
-
-        // Add event listeners to the new download buttons
-        document.querySelectorAll('.download-btn').forEach(btn => {
-            btn.addEventListener('click', e => {
-                const appId = parseInt(e.currentTarget.dataset.appId);
-                const app = dummyApps.find(a => a.id === appId);
-                if (app) {
-                    app.downloadCount++;
-                    // Save the updated count to localStorage
-                    localStorage.setItem(`app-downloads-${app.id}`, app.downloadCount);
-                    
-                    const downloadCountElement = document.getElementById(`download-count-${appId}`);
-                    if (downloadCountElement) {
-                        downloadCountElement.textContent = formatDownloadCount(app.downloadCount);
-                    }
-                }
-            });
-        });
     }
 
     function updateUI() {
