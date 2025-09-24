@@ -90,7 +90,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:65,name:'Melon VPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2023/06/melon-vpn-unblock-proxy-vpn-150x150.jpg',downloadUrl:'https://files.modyolo.com/Melon%20VPN/Melon_VPN_%20v9.0.090%20_MOD.apk'},
         {id:66,name:'ExpressVPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2021/11/expressvpn-trusted-secure-150x150.jpg',downloadUrl:'https://files.modyolo.com/ExpressVPN/ExpressVPN_%20v12.30.0%20x.apk'},
         {id:67,name:'Proton VPN',category:'Modified Apps',isFeatured:false,iconUrl:'https://modyolo.com/wp-content/uploads/2022/07/proton-vpn-private-secure-150x150.jpg',downloadUrl:'https://files.modyolo.com/Proton%20VPN/Proton_VPN_%20v5.13.19.0%20x.xapk'},
-        {id:67,name:'Super VPN Proxy',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/5/super-vpn-proxy-mod-apk-5.webp',downloadUrl:'https://getmodsapk.com/dl-track/super-vpn-proxy-mod-apk/218256'},
+        {id:68,name:'Super VPN Proxy',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/media/2025/5/super-vpn-proxy-mod-apk-5.webp',downloadUrl:'https://getmodsapk.com/dl-track/super-vpn-proxy-mod-apk/218256'},
+        {id:69,name:'Viber',category:'Modified Apps',isFeatured:false,iconUrl:'https://getmodsapk.com/storage/Viber%20MOD%20APK7.webp',downloadUrl:'https://getmodsapk.com/dl-track/8263-viber-mod-apk/216230'},
+        {id:70,name:'Mobile Legends(Skin Hack, Unlimited Diamonds)',category:'Modified Apps',isFeatured:false,iconUrl:'https://apkresult.io/wp-content/uploads/2022/08/mobile-legends-bang-bang-150x150.png',downloadUrl:'https://cdn902.onehost.io/2023/Mobile_Legends_Bang_Bang_22.1.18.11201_1758299760_latestmodapks.com.apk'},
+        {id:71,name:'Appcreator24',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/yFXzwWps/1039250-ico.png',downloadUrl:'https://www.mediafire.com/file/dvat90wjipq4ldd/AppCreator%2528Wyappstore%2529.apk/file'},
+        {id:72,name:'Appcreator24 Pro Beta',category:'Modified Apps',isFeatured:false,iconUrl:'https://i.ibb.co/1Jnwrkdy/1211684-ico.png',downloadUrl:'https://www.mediafire.com/file/dj1ze1c8mksvvpm/Appcreator24_Pro_Beta%2528Wyappstore%2529.apk/file'},
     ];
 
     // Example data for the Featured App Screen (Modified)
