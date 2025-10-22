@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {id:72,name:'Appcreator24 Pro Beta',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/1Jnwrkdy/1211684-ico.png',downloadUrl:'https://www.mediafire.com/file/dj1ze1c8mksvvpm/Appcreator24_Pro_Beta%2528Wyappstore%2529.apk/file'},
         {id:73,name:' အရောင်းစာရင်းမှတ်စု',category:'Development',isFeatured:false,iconUrl:'https://i.ibb.co/tpnX9Mx7/photo-2025-09-24-21-27-54.jpg',downloadUrl:'https://www.mediafire.com/file/b5p7fc489tajra1/%25E1%2580%25A1%25E1%2580%259B%25E1%2580%25B1%25E1%2580%25AC%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2585%25E1%2580%25AC%25E1%2580%259B%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2599%25E1%2580%25BE%25E1%2580%2590%25E1%2580%25BA%25E1%2580%2585%25E1%2580%25AF.apk/file'},
         {id:72,name:'WY MovieBox',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/3mm1SwVj/photo-2025-09-26-02-06-35.jpg',downloadUrl:'https://www.mediafire.com/file/lh7ke9wkc4hzhhy/WY_MovieBox.apk/file'},
+        {id:72,name:'စွယ်စုံ',category:'Entertainment',isFeatured:false,iconUrl:'https://i.ibb.co/B1Z55vc/download.jpg',downloadUrl:'https://www.mediafire.com/file/420e47wxrr1h5gf/%25E1%2580%2585%25E1%2580%25BD%25E1%2580%259A%25E1%2580%25BA%25E1%2580%2585%25E1%2580%25AF%25E1%2580%25B6.apk/file'},
     ];
 
     // Example data for the Featured App Screen (Modified)
