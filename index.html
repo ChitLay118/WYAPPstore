@@ -3,72 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WY App Store</title>
+    <title>AppStore - Download New Version</title>
+    
+    <!-- Google Fonts for Myanmar Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Tailwind Config to use Myanmar Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans Myanmar"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Phosphor Icons for Features -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
 </head>
-<body class="bg-white min-h-screen font-sans text-gray-800">
-    <header class="bg-blue-600 text-white p-4">
-        <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
-            <div class="text-center sm:text-left">
-                <h1 class="text-base font-bold">WY App Store</h1>
-                <h2 class="text-xs font-normal">c388925@gmail.com</h2>
+<body class="text-white min-h-screen flex flex-col antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navigation/Header -->
+    <nav class="w-full p-6 flex justify-center opacity-0 animate-fade-in-up">
+        <div class="flex items-center gap-3">
+            <img src="https://i.ibb.co/tpg13HYw/file-00000000f318720b8cc2b21c7b9ad5dd.png" alt="AppStore Mini Icon" class="w-8 h-8 rounded-lg shadow-sm">
+            <span class="font-bold text-xl tracking-wider text-gray-200">AppStore</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 max-w-5xl mx-auto w-full">
+        
+        <!-- Hero Section -->
+        <div class="text-center w-full max-w-3xl mx-auto opacity-0 animate-fade-in-up delay-100">
+            <!-- App Icon with floating animation -->
+            <div class="relative inline-block mb-8 animate-float">
+                <div class="absolute inset-0 bg-blue-500 blur-2xl opacity-30 rounded-full"></div>
+                <img src="https://i.ibb.co/tpg13HYw/file-00000000f318720b8cc2b21c7b9ad5dd.png" 
+                     alt="AppStore Icon" 
+                     class="relative w-36 h-36 sm:w-44 sm:h-44 rounded-3xl shadow-2xl border-4 border-slate-800/50 object-cover mx-auto z-10">
+                <div class="absolute -bottom-3 -right-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full border-2 border-slate-900 z-20 shadow-lg">
+                    v1.0.0
+                </div>
             </div>
-            <div class="w-full sm:w-auto">
-                <div class="relative">
-                    <input type="text" id="search-input" placeholder="အက်ပ်များကိုရှာရန်"
-                           class="w-full px-4 py-2 rounded-full text-black focus:outline-none focus:ring-2 focus:ring-blue-300 pl-10">
-                    <span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+
+            <!-- Headings -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">
+                    အဆင့်မြင့် AppStore
+                </span> 
+                <br />ရောက်ရှိလာပါပြီ
+            </h1>
+            
+            <p class="text-gray-400 text-lg sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+                ပိုမိုကောင်းမွန်တဲ့ အတွေ့အကြုံတွေအတွက် AppStore ကို အဆင့်မြှင့်တင်ပေးထားပါတယ်။ Feature အသစ်တွေ အများကြီး ထည့်သွင်းထားလို့ ယခုပဲ ဒေါင်းလုဒ်ဆွဲပြီး အသုံးပြုကြည့်လိုက်ပါ။
+            </p>
+
+            <!-- Download Button -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://download1348.mediafire.com/hbkc75bv3pjgy_kh3Lz0x94mZ2SR0z2EcosA57LXG_-Br2HApV0f1I9NV18D5VJCxbRCkLfFi-M_ZVdkNJSo3PBSedPev3MQct2pubGqML3X9Gxn3K15CV4lYFhkxGvlJGsPy4WDXDDryrzX6iZ0o_Z1fyOMCSzcibAbz_zF1OLQuyk/q6d2ydazlsfy2zf/AppStore%28v-1.0.0%29%5B2%5D.apk" 
+                   class="group relative w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">
+                    <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-[shimmer_1s_forwards]"></div>
+                    <i class="ph ph-download-simple text-2xl"></i>
+                    <span>ယခုပဲ Download ဆွဲရန်</span>
+                </a>
+                <p class="text-sm text-gray-500 sm:hidden">Size: ~25 MB  Android အတွက်</p>
+            </div>
+            <p class="hidden sm:block text-sm text-gray-500 mt-4">Android Device များအတွက် အထူးထုတ်လုပ်ထားပါသည်</p>
+        </div>
+
+        <!-- Features Section -->
+        <div class="mt-20 w-full opacity-0 animate-fade-in-up delay-200">
+            <h2 class="text-2xl font-bold text-center mb-10 text-gray-200">
+                <span class="border-b-2 border-indigo-500 pb-2">ပါဝင်လာမည့် Feature အသစ်များ</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition duration-300 group">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph ph-rocket-launch text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">ပိုမိုမြန်ဆန်လာမှု</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">App များရှာဖွေခြင်းနှင့် ဒေါင်းလုဒ်ဆွဲခြင်း အမြန်နှုန်းကို အထူးမြှင့်တင်ပေးထားပါတယ်။</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition duration-300 group">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph ph-paint-brush-broad text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">ဒီဇိုင်းအသစ်</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">မျက်စိပသာဒဖြစ်စေမယ့် ခေတ်မီ UI/UX ဒီဇိုင်းအသစ်ဖြင့် ပြောင်းလဲဖန်တီးထားပါတယ်။</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph ph-shield-check text-3xl text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">လုံခြုံစိတ်ချရမှု</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">အက်ပ်များကို စစ်ဆေးမှုစနစ်အသစ်ထည့်သွင်းထား၍ Virus အန္တရာယ်မှ ကင်းဝေးစေပါတယ်။</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="glass-card p-6 rounded-2xl hover:bg-slate-800/50 transition duration-300 group">
+                    <div class="w-14 h-14 bg-pink-500/20 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph ph-squares-four text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-gray-100">App အသစ်များ</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">လူကြိုက်များတဲ့ နောက်ဆုံးပေါ် ဂိမ်းနှင့် အက်ပ်ပေါင်းများစွာကို အလွယ်တကူ ရယူနိုင်ပါတယ်။</p>
                 </div>
             </div>
         </div>
-    </header>
 
-    <main class="container mx-auto p-4 sm:p-6 lg:p-8 mb-20">
-        <h2 class="text-2xl font-bold mb-4">အထူးအသားပေးအက်ပ်များ</h2>
-        <div id="featured-app-list-container" class="flex overflow-x-hidden relative w-full snap-x snap-mandatory scroll-smooth">
-            </div>
-
-        <h2 class="text-2xl font-bold mt-8 mb-4">အက်ပ်အားလုံး</h2>
-        <div id="all-app-list-container" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            </div>
     </main>
 
-    <nav id="bottom-nav" class="fixed bottom-0 left-0 w-full bg-white shadow-lg z-20 transition-transform duration-300 ease-in-out">
-        <div id="category-nav" class="flex justify-around items-center h-16">
-            </div>
-    </nav>
-    
-    <div id="featured-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50 flex flex-col">
-        <div class="flex-1 overflow-hidden flex flex-col">
-            <div class="flex justify-between items-center p-4 bg-gray-800 text-white">
-                <h3 id="modal-title" class="text-xl font-bold"></h3>
-                <button id="close-modal-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                    <span class="material-icons">close</span>
-                </button>
-            </div>
-            <div id="featured-video-section" class="w-full" style="height: 200px;">
-                </div>
-            <div id="featured-content" class="flex-1 overflow-y-auto p-4 space-y-4">
-                </div>
-        </div>
-    </div>
-    
-    <div id="fullscreen-modal" class="hidden fixed inset-0 bg-black z-50 flex items-center justify-center">
-        <div class="absolute top-4 right-4 z-20 flex space-x-2">
-            <button id="save-fullscreen-btn" class="text-white text-3xl focus:outline-none">
-                <span class="material-icons">save</span>
-            </button>
-            <button id="close-fullscreen-btn" class="text-white text-3xl focus:outline-none">
-                <span class="material-icons">close</span>
-            </button>
-        </div>
-        <div id="fullscreen-image-container" class="relative w-full h-full flex items-center justify-center">
-            </div>
-    </div>
+    <!-- Footer -->
+    <footer class="w-full text-center p-6 text-gray-500 text-sm mt-10 opacity-0 animate-fade-in-up delay-300 border-t border-slate-800/50">
+        <p>&copy; 2026 AppStore. All rights reserved.</p>
+        <p class="mt-1 text-xs">အကောင်းဆုံးဝန်ဆောင်မှုများပေးနိုင်ရန် အမြဲကြိုးစားလျက်ရှိပါသည်။</p>
+    </footer>
 
-    <script src="script.js"></script>
+    <!-- Shimmer Animation Definition for Button -->
+    <style>
+        @keyframes shimmer {
+            100% {
+                transform: skewX(-12deg) translateX(200%);
+            }
+        }
+    </style>
 </body>
 </html>
