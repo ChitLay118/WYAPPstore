@@ -7,7 +7,7 @@
     { "name": "Modified", "icon": "edit_note", "category": "Modified Apps" }
   ],
   "apps": [
-    /* === DEVELOPMENT (အဆင့်မြင့်တင်မှုဆိုင်ရာ App များ) === */
+    //* === DEVELOPMENT (အဆင့်မြင့်တင်မှုဆိုင်ရာ App များ) === */
     { "name": "AppStore", "category": "Development", "isFeatured": true, "iconUrl": "https://i.ibb.co/tpg13HYw/file-00000000f318720b8cc2b21c7b9ad5dd.png", "bgImageUrl": "https://i.ibb.co/QF63WmYw/file-00000000b72071faaf5becca49f58c7e.png", "downloadUrl": "https://download1348.mediafire.com/e3b42lzl8zegaJWp5HUM3IY5F7uBBzuZ4VMCtRlQ8xYK25ZZKG1Happcv9UvkZOSAH4b1SgDWHTKBepa44kJXKpGjzRoPFz2gP6dOGu9mdRT_8ynolFfptaeLFq66rBx94YGY02GKivocftFwQGzi_dFmZSr--kuTZieqC9HzRfyRO4/q6d2ydazlsfy2zf/AppStore%28v-1.0.0%29%5B2%5D.apk", "description": "AppStore free app downloads(appများလာရောက်တင်နိုင်ပါသည်)." },
     { "name": "ThaiMMJob", "category": "Development", "isFeatured": true, "iconUrl": "https://i.ibb.co/Z66nZKxq/5083.png", "bgImageUrl": "https://i.ibb.co/hFR7xH7Y/file-000000001ec871fab4ff82c507179a79.png", "downloadUrl": "https://download853.mediafire.com/olmkafl02zjgPNR79QEoZJrNJFUhnQ58beF_QGKOzW-SsCDE07g_zpmC7uCCKI8GCfakD7PBnMaXnMO8cBvAbo9uMsxwO2fHICXU5UvPAfV61wd7AxiOhQ9zQ9GcQxEbE711wmgr06Oxm2fqT7HD5vJoNZcJZWsZHsH-q0841jWFwz0/0t2mr6aom4s9vtq/ThaiMMJob%28v-3.0.0%29%5B1%5D.apk", "description": "အလုပ်အကိုင်များကိုတင်ခြင်းနှင့်ရှာဖွေခြင်း." },
     { "name": "Sketchware Pro", "category": "Development", "isFeatured": true, "iconUrl": "https://i.ibb.co/YB24757s/photo-2025-09-18-07-49-55.jpg", "bgImageUrl": "https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg", "downloadUrl": "https://www.mediafire.com/file/7pi9zf551xbgiy8/Sketchware_pro.apk/file", "description": "Develop Android apps on your phone with Sketchware Pro." },
@@ -22,7 +22,7 @@
     { "name": "အရောင်းစာရင်းမှတ်စု", "category": "Development", "isFeatured": false, "iconUrl": "https://i.ibb.co/tpnX9Mx7/photo-2025-09-24-21-27-54.jpg", "downloadUrl": "https://www.mediafire.com/file/b5p7fc489tajra1/%25E1%2580%25A1%25E1%2580%259B%25E1%2580%25B1%25E1%2580%25AC%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2585%25E1%2580%25AC%25E1%2580%259B%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2599%25E1%2580%25BE%25E1%2580%2590%25E1%2580%25BA%25E1%2580%2585%25E1%2580%25AF.apk/file" },
     { "name": "Acode Editor", "category": "Development", "isFeatured": false, "iconUrl": "https://modyolo.com/wp-content/uploads/2022/02/acode-powerful-code-editor-150x150.jpg", "downloadUrl": "https://files.modyolo.com/Acode/Acode%20v1.11.4.apk" },
 
-    /* === ENTERTAINMENT (ဖျော်ဖြေရေး App များ) === */
+    //* === ENTERTAINMENT (ဖျော်ဖြေရေး App များ) === */
     { "name": "WY MovieBox", "category": "Entertainment", "isFeatured": false, "iconUrl": "https://i.ibb.co/3mm1SwVj/photo-2025-09-26-02-06-35.jpg", "downloadUrl": "https://www.mediafire.com/file/lh7ke9wkc4hzhhy/WY_MovieBox.apk/file" },
     { "name": "IMDB Movies and TV Shows", "category": "Entertainment", "isFeatured": false, "iconUrl": "https://i.ibb.co/206dWSK6/photo-2025-09-18-11-23-21.jpg", "downloadUrl": "https://www.mediafire.com/file/iehjn9emmv2pa2l/IMDb_Premium_v9.3.2.160259480_Modded_by_%2540Getmodpcs.apk/file" },
     { "name": "သတင်းနှင့်ဇာတ်ကား", "category": "Entertainment", "isFeatured": false, "iconUrl": "https://i.ibb.co/NRB7DRs/IMG-20250907-105744.png", "downloadUrl": "https://www.mediafire.com/file/kz2cas0hpx4p2mz/%E1%80%9E%E1%80%90%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%BE%E1%80%84%E1%80%BA%E1%80%B7%E1%80%87%E1%80%AC%E1%80%90%E1%80%BA%E1%80%80%E1%80%AC%E1%80%B8update.apk/file" },
@@ -37,7 +37,7 @@
     { "name": "My Movie Premium", "category": "Entertainment", "isFeatured": false, "iconUrl": "https://i.ibb.co/99mb8yc5/photo-2025-09-19-01-12-06.jpg", "downloadUrl": "https://www.mediafire.com/file/l2p55wzq028j6nk/MyMovie_Premium_v14.13.5_Modded_by_%2540Getmodpcs.apk/file" },
     { "name": "Amazon Prime Video", "category": "Entertainment", "isFeatured": false, "iconUrl": "https://modyolo.com/wp-content/uploads/2021/09/amazon-prime-video-150x150.jpg", "downloadUrl": "https://files.modyolo.com/Amazon%20Prime%20Video/Amazon_Prime_Video_%20v3.0.424.547%20_MOD.apk" },
 
-    /* === MODIFIED APPS (ပြုပြင်ထားသော App များ) === */
+    //* === MODIFIED APPS (ပြုပြင်ထားသော App များ) === */
     { "name": "WY AppStore", "category": "Modified Apps", "isFeatured": true, "iconUrl": "https://i.ibb.co/PzxgMt7N/photo-2025-09-18-00-58-09.jpg", "bgImageUrl": "https://i.ibb.co/XHJwdsm/pexels-umkreisel-app-956999.jpg", "downloadUrl": "https://www.mediafire.com/file/n8ohx9xnfisynuw/WY_App_Store.apk/file", "description": "Official WY App Store for modified apps and tools." },
     { "name": "Download Video No Watermark", "category": "Modified Apps", "isFeatured": false, "iconUrl": "https://i.ibb.co/tTrfrTT2/photo-2025-09-18-10-04-51.jpg", "downloadUrl": "https://www.mediafire.com/file/jcj5q0w5s4t6p3r/AhaTik_Downloader_Premium_v1.52.3_Modded_by_%2540Getmodpcs.apk/file" },
     { "name": "Ai Video Generator", "category": "Modified Apps", "isFeatured": false, "iconUrl": "https://i.ibb.co/PZsPMHMX/photo-2025-09-18-10-22-02.jpg", "downloadUrl": "https://www.mediafire.com/file/nz7f0gdfjhat5vm/Ai_Video_Generator.apk/file" },
@@ -72,7 +72,7 @@
     { "name": "Viber MOD", "category": "Modified Apps", "isFeatured": false, "iconUrl": "https://getmodsapk.com/storage/Viber%20MOD%20APK7.webp", "downloadUrl": "https://getmodsapk.com/dl-track/8263-viber-mod-apk/216230" },
     { "name": "MX Player Pro", "category": "Modified Apps", "isFeatured": false, "iconUrl": "https://modyolo.com/wp-content/uploads/2021/09/mx-player-pro-apk-mod-150x150.png", "downloadUrl": "https://files.modyolo.com/Mx%20player/MX_Player_%20v2.1.1%20x.apk" },
 
-    /* === GAMES (ဂိမ်းများ) === */
+    //* === GAMES (ဂိမ်းများ) === */
     { "name": "Mobile Legends Hack", "category": "Games", "isFeatured": false, "iconUrl": "https://apkresult.io/wp-content/uploads/2022/08/mobile-legends-bang-bang-150x150.png", "downloadUrl": "https://cdn902.onehost.io/2023/Mobile_Legends_Bang_Bang_22.1.18.11201_1758299760_latestmodapks.com.apk" },
     { "name": "Tennis Clash MOD", "category": "Games", "isFeatured": false, "iconUrl": "https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp", "downloadUrl": "https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666" },
     { "name": "Cat Runner", "category": "Games", "isFeatured": false, "iconUrl": "https://getmodsapk.com/storage/Cat-Runner-MOD-APK%20(2)1.webp", "downloadUrl": "https://getmodsapk.com/dl-track/cat-runner-mod-apk/212522" },
