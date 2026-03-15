@@ -1,7 +1,7 @@
 {
-  "versionCode": 3,
-  "versionName": "3.0.0",
-  "downloadUrl": "https://github.com/ChitLay118/WYAPPstore/releases/download/AppStore/AppStore.v-2.0.apk",
+  "versionCode": 2,
+  "versionName": "2.0.0",
+  "downloadUrl": "https://github.com/ChitLay118/WYAPPstore/releases/download/AppStore/AppStore.v2.0.apk",
   "changelog": " Bug များပြင်ဆင်ထားသည်\n Google Login စနစ်အသစ်ထည့်ထားသည်\n UI ပိုမိုချောမွေ့လာသည်"             
                    
 }
